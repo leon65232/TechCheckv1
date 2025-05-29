@@ -1,0 +1,67 @@
+/* src/components/ChatbotSection.css */
+.chatbot-section {
+  position: relative;
+  background: url('/images.jpg') no-repeat center center/cover; /* Ensure the background image covers the area */
+  height: 20rem; /* Full screen height */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  text-align: center; /* Ensure text is centered */
+  padding: 1.25rem;
+  margin-top: 0;
+}
+
+.chatbot-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+  z-index: 1;
+}
+
+.chatbot-overlay {
+  position: relative;
+  z-index: 2;
+  color: #c2f7e2; /* Text color */
+}
+
+.chatbot-overlay h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem); /* Responsive font size for the heading */
+  margin-bottom: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.chatbot-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #AED5C7;
+  color: #AED5C7;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  transition: 0.3s ease;
+  font-size: 1.125rem;
+}
+
+.chatbot-button:hover {
+  background-color: #AED5C7;
+  color: #183D3D;
+}
+
+@media (max-width: 768px) {
+  .chatbot-section {
+    height: 80vh; /* Adjust height on smaller screens */
+  }
+
+  .chatbot-overlay h2 {
+    font-size: 1.8rem; /* Adjust heading font size for smaller screens */
+  }
+
+  .chatbot-button {
+    font-size: 1rem; /* Adjust button font size */
+  }
+}

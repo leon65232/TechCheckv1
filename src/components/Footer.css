@@ -1,0 +1,78 @@
+/* src/components/Footer.css */
+.footer {
+  background-color: #5C8374;
+  color: #d8e8e0;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;  /* Space between the two columns */
+  align-items: flex-start;  /* Align items to the top */
+  flex-wrap: wrap;
+  box-sizing: border-box;  /* Ensure padding is included in the element's size */
+}
+
+.footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  /* Space between items */
+  min-width: 150px;  /* Ensure the columns have a minimum width */
+}
+
+.footer h3 {
+  color: #040D12;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: #d8e8e0;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .social a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer .social i {
+  width: 1.25rem;  /* Icon size */
+}
+
+.social img {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.footer-brand {
+  font-size: 2.25rem;
+  font-family: 'Russo One', sans-serif;
+  color: #040D12;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .footer-column {
+    min-width: 100%;  /* Stack the columns vertically */
+  }
+
+  .footer .footer-column h3 {
+    font-size: 1.25rem;
+  }
+
+  .footer .footer-column a {
+    font-size: 0.875rem;  /* Smaller font size for mobile */
+  }
+
+  .footer .social a {
+    font-size: 0.875rem;  /* Adjust social links font size */
+  }
+}

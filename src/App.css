@@ -1,0 +1,70 @@
+/* src/App.css */
+/* src/index.css or src/App.css */
+
+/* Resetting body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;  /* Ensure the body takes full height */
+  width: 100%;   /* Ensure the body takes full width */
+  display: block;  /* Remove Flexbox from body and make it a block-level element */
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #040D12;
+}
+
+main {
+  display: block; /* Ensure main content uses a block layout */
+  width: 100%;    /* Full width */
+}
+
+section {
+  display: block;  /* Ensure sections are block elements */
+}
+
+.container {
+  display: flex;
+  gap: 1.8rem;
+  padding: 3.7rem;
+}
+
+.card {
+  text-align: center;
+  max-width: 15.6rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #9cbca4;
+  margin-bottom: 1.25rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.card button {
+  background-color: transparent;
+  border: 1px solid #AED5C7;
+  border-radius: 0.3125rem;
+  color: #AED5C7;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #AED5C7;
+  color: #183D3D;
+}
