@@ -16,7 +16,9 @@
     "i": "^0.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-keyboard-tester": "file:",
     "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.6.1",
     "remark-gfm": "^4.0.1",
     "wavesurfer.js": "^7.9.5"
   },

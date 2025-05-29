@@ -1,0 +1,78 @@
+/* src/components/CheckMapSection.css */
+.check-map {
+  display: flex;
+  justify-content: center;  /* Center the cards horizontally */
+  align-items: center;  /* Center the cards vertically */
+  height: 20rem;  /* Full screen height */
+  gap: 2rem;  /* Reduced gap between cards */
+  padding: 3rem;  /* Padding around the content */
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;  /* Flex container for the cards */
+  gap: 2rem;  /* Reduced gap between the cards */
+  justify-content: center;  /* Center the cards horizontally */
+}
+
+.card {
+  background-color: #050E12;
+  color: #c2f7e2;
+  width: 18rem;  /* Fixed width for the cards */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;  /* Center the text inside the card */
+  margin-bottom: 7rem; /* Ensure there's some space between cards vertically */
+}
+
+.card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.card button {
+  padding: 0.75rem 1.25rem;
+  background-color: #AED5C7;
+  border: none;
+  color: #183D3D;
+  font-size: 1.125rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #183D3D;
+  color: #AED5C7;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;  /* Stack the cards vertically on smaller screens */
+    align-items: center;  /* Center the cards vertically */
+  }
+
+  .card {
+    width: 100%;  /* Make cards take full width on mobile */
+    max-width: 20rem;  /* Set a max width */
+    margin-bottom: 1.5rem;  /* Reduce space between stacked cards */
+  }
+
+  .card h1 {
+    font-size: 2rem;  /* Adjust heading size on mobile */
+  }
+
+  .card p {
+    font-size: 1rem;  /* Adjust paragraph size on mobile */
+  }
+
+  .card button {
+    font-size: 1rem;  /* Adjust button font size */
+  }
+}

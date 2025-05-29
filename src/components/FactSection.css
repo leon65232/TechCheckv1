@@ -1,0 +1,45 @@
+/* src/components/FactSection.css */
+.fact-section {
+  background-color: #050E12;
+  padding: 6.25rem 1.25rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fact-item {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+
+.fact-item h2 {
+  color: #c2f7e2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.fact-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .fact-item {
+    margin-bottom: 2.5rem; /* Reduce bottom margin on smaller screens */
+    max-width: 90%; /* Make it take up more space on smaller screens */
+  }
+
+  .fact-item h2 {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  .fact-item p {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+}
