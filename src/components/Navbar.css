@@ -29,7 +29,7 @@
 }
 
 /* Navbar Links */
-.nav-links a {
+.nav-links link {
   color: white; /* Text color */
   text-decoration: none; /* Remove underlines */
   font-size: 1.2rem; /* Font size for links */
@@ -39,7 +39,7 @@
 }
 
 /* Underline on Hover */
-.nav-links a::after {
+.nav-links link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -50,7 +50,7 @@
   transition: width 0.3s; /* Smooth underline effect */
 }
 
-.nav-links a:hover::after {
+.nav-links link:hover::after {
   width: 100%; /* Full width underline on hover */
 }
 
@@ -68,7 +68,7 @@
     gap: 1.5rem; /* Space between links */
   }
 
-  .nav-links a {
+  .nav-links link {
     font-size: 1.5rem; /* Increase font size for better readability on mobile */
   }
 }
