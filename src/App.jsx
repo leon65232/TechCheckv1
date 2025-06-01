@@ -5,30 +5,35 @@ import Keyboard from "./components/Keyboard";
 import Mouse from "./components/Mouse";
 import Map from "./components/Map";
 import Chatbot from "./pages/chatbot";
+import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import Footer from './components/Footer';
-import ChatbotSection from './components/ChatbotSection';
-import FactSection from './components/FactSection';
-import CheckMapSection from './components/CheckMapSection';
 import { Store } from "./context/Context";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import './App.css'; 
-const App = () => {
+
+const AppContent = () => {
   const { darkMode } = Store();
+  const location = useLocation();
+
+  const hideLayout = location.pathname === '/chatbot';
+
   return (
     // <div className="flex flex-row items-center justify-center bg-gray-100">
     //   {/* <Keyboard /> */}
     //   {/* <Mouse /> */}
     // </div>
     
-    <div className="App">
+    <div>
       {/* Komponen lain */}
-      <Navbar />
-      <Hero />
-      <ChatbotSection />
-      <FactSection />
-      <CheckMapSection /> 
-      <Footer />
+
+      {!hideLayout && <Navbar />}
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/chatbot' element={<Chatbot />}/>
+      </Routes>
+      {!hideLayout && <Footer />}
+
       {/* <MicTest /> */}
       {/* <h1 className="text-center text-2xl font-bold mt-10">Headphone Test</h1> */}
       {/* <HeadphoneCheck /> */}
@@ -37,6 +42,12 @@ const App = () => {
     </div>
   );
 };
+
+const App = () => (
+  <Router>
+    <AppContent />
+  </Router>
+);
 
 export default App;
 
