@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown'; // Import ReactMarkdown
 import remarkGfm from 'remark-gfm';       // Import remarkGfm for GitHub Flavored Markdown
+import { useNavigate } from 'react-router-dom';
+import { IoArrowBackCircleOutline } from "react-icons/io5";
 import './Chatbot.css';
 
 // !!! IMPORTANT: Replace with your actual Gemini API key.
@@ -20,6 +22,8 @@ function Chatbot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const chatSessionRef = useRef(null);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     scrollToBottom();
@@ -72,46 +76,50 @@ function Chatbot() {
   };
 
   return (
-    <div className="chat-container">
-      <div className="chat-header">
-        Gemini Chatbot (Personal Project)
-      </div>
-      <div className="chat-messages">
-        {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.sender}`}>
-            {/* Conditional rendering for markdown for bot messages */}
-            {msg.sender === 'bot' ? (
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {msg.text}
-              </ReactMarkdown>
-            ) : (
-              msg.text
-            )}
-          </div>
-        ))}
-        {isLoading && (
-          <div className="message bot typing-indicator">
-            Thinking...
-          </div>
-        )}
-        <div ref={messagesEndRef} />
-      </div>
-      <div className="chat-input-container">
-        <input
-          type="text"
-          id="user-input"
-          placeholder={isLoading ? "Waiting for response..." : "Type your message..."}
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          onKeyPress={handleKeyPress}
-          disabled={isLoading}
-        />
-        <button id="send-button" onClick={sendMessage} disabled={isLoading}>
-          {isLoading ? 'Sending...' : 'Send'}
-        </button>
-      </div>
+  <div className="chat-container">
+    <div className="chat-header">
+      <button className="back-button" onClick={() => navigate('/')}>
+        <IoArrowBackCircleOutline size={28}/>
+      </button>
+      <div className="chat-header-title">Chatbot</div>
     </div>
-  );
+    <div className="chat-messages">
+      {messages.map((msg, index) => (
+        <div key={index} className={`message ${msg.sender}`}>
+          {/* Conditional rendering for markdown for bot messages */}
+          {msg.sender === 'bot' ? (
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {msg.text}
+            </ReactMarkdown>
+          ) : (
+            msg.text
+          )}
+        </div>
+      ))}
+      {isLoading && (
+        <div className="message bot typing-indicator">
+          Thinking...
+        </div>
+      )}
+      <div ref={messagesEndRef} />
+    </div>
+    <div className="chat-input-container">
+      <input
+        type="text"
+        id="user-input"
+        placeholder={isLoading ? "Waiting for response..." : "Type your message..."}
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
+        onKeyPress={handleKeyPress}
+        disabled={isLoading}
+      />
+      <button id="send-button" onClick={sendMessage} disabled={isLoading}>
+        {isLoading ? 'Sending...' : 'Send'}
+      </button>
+    </div>
+  </div>
+);
 }
+
 
 export default Chatbot;
