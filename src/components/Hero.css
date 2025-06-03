@@ -5,12 +5,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 100vh; /* Full screen height */
+  /* height: 100vh; Full screen height */
   padding: 5rem 10%; /* Adjusted padding for better spacing */
   gap: 15rem; /* Adjusted gap between content */
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box; /* Ensures padding doesn't overflow */
+  margin: 0;
 }
 
 .hero-content {

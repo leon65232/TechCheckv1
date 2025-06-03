@@ -35,7 +35,7 @@ const Mouse = () => {
   
   useEffect(() => {
     const activeScrollHandler = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         const dir = event.deltaY < 0 ? 'scrollup' : 'scrolldown';
         console.log(dir);
         const index = allButtons.findIndex(

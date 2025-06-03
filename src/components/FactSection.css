@@ -6,6 +6,11 @@
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
 }
 
 .fact-item {
@@ -13,6 +18,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2.5rem;
+  
 }
 
 .fact-item h2 {
@@ -25,7 +31,7 @@
 
 .fact-item p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.7;
 }
 
@@ -40,6 +46,6 @@
   }
 
   .fact-item p {
-    font-size: 1rem; /* Adjust font size for readability */
+    font-size: 1.3rem; /* Adjust font size for readability */
   }
 }

@@ -10,6 +10,7 @@
   text-align: center; /* Ensure text is centered */
   padding: 1.25rem;
   margin-top: 0;
+  margin: 0;
 }
 
 .chatbot-section::before {

@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 body {
   height: 100%;  /* Full height of the viewport */
   width: 100%;   /* Full width */
@@ -16,12 +19,33 @@ body {
 }
 
 main {
+=======
+.main {
+>>>>>>> Stashed changes
+=======
+.main {
+>>>>>>> Stashed changes
+=======
+.main {
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column; /* Stack content vertically */
   justify-content: center; /* Center the content vertically */
   align-items: center; /* Center the content horizontally */
   width: 100%;
   padding: 20px;  /* Optional: Add padding around the content */
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  background-color: #183D3D;
+>>>>>>> Stashed changes
+=======
+  background-color: #183D3D;
+>>>>>>> Stashed changes
+=======
+  background-color: #183D3D;
+>>>>>>> Stashed changes
 }
 
 /* Center keyboard container */
