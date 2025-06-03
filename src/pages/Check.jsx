@@ -9,29 +9,11 @@ import './Check.css';
 
 const Check = () => {
   return (
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <div>
-      <Keyboard />
-      <Mouse />
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <div className='main'>
       <div className='flex items-center justify-around'>
         <Keyboard />
         <Mouse />
       </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       <MicTest />
       <HeadphoneCheck />
     </div>
