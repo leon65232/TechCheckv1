@@ -46,12 +46,13 @@ const HeadphoneCheck = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 p-10">
+      <h2 className="text-white text-4xl font-semibold mb-0">🎧 Check Headset Online</h2>
       <div className="flex justify-center gap-20">
         <div className="flex flex-col items-center">
           <img src="/Left Headphone.png" alt="Left Headphone" className="w-32" />
           <button
             onClick={toggleLeft}
-            className={`mt-4 px-6 py-2 rounded-lg text-white font-semibold flex items-center gap-2 ${
+            className={`mt-10 px-6 py-2 rounded-lg text-white font-semibold flex items-center gap-2 ${
               playingLeft ? 'bg-red-500' : 'bg-blue-600'
             }`}
           >
@@ -64,7 +65,7 @@ const HeadphoneCheck = () => {
           <img src="/Right Headphone.png" alt="Right Headphone" className="w-32" />
           <button
             onClick={toggleRight}
-            className={`mt-4 px-6 py-2 rounded-lg text-white font-semibold flex items-center gap-2 ${
+            className={`mt-10 px-6 py-2 rounded-lg text-white font-semibold flex items-center gap-2 ${
               playingRight ? 'bg-red-500' : 'bg-blue-600'
             }`}
           >

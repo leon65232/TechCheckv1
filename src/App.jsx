@@ -13,17 +13,20 @@ const AppContent = () => {
   const hideLayout = location.pathname === '/chatbot';
   
   return (
-    {!hideLayout && <Navbar />}
-    <Routes>
-      <Route path="/" element={<Home />} /> 
-      {/* <Route path="/keyboard" element={<Keyboard />} />  KeyboardLoader page */}
-      <Route path="/map" element={<Map />} />  
-      <Route path="/check" element={<Check />} />  
-      <Route path="/chatbot" element={<Chatbot />} /> 
-    </Routes>
-    {!hideLayout && <Footer />}
-    <Footer />
-       
+    <>
+      {!hideLayout && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        {/* <Route path="/keyboard" element={<Keyboard />} />  KeyboardLoader page */}
+        <Route path="/map" element={<Map />} />  
+        <Route path="/check" element={<Check />} />  
+        <Route path="/chatbot" element={<Chatbot />} /> 
+      </Routes>
+      {!hideLayout && <Footer />}
+    </>
+  );
+};
+
 const App = () => (
   <Router>
     <AppContent />
