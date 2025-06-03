@@ -1,16 +1,13 @@
 .navbar {
-  width: 100%; /* Full width */
+  width: 100%; 
   background-color: #5C8374; /* Navbar background */
   display: flex; /* Flexbox for layout */
   align-items: center; /* Center the items vertically */
   justify-content: space-between; /* Space between logo and links */
   padding: 1.5rem 3rem; /* Adjusted padding for better spacing */
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3); /* Shadow for better look */
-  position: absolute; /* Keep navbar fixed at the top */
+  /* position: absolute; Keep navbar fixed at the top */
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100; /* Ensures it stays on top of content */
 }
 
 /* Logo Style */
@@ -25,11 +22,14 @@
 /* Navbar Links Container */
 .nav-links {
   display: flex; /* Flexbox for the nav links */
-  gap: 2rem; /* Space between links */
+  gap: 3rem; /* Space between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar Links */
-.nav-links a {
+.nav-links link {
   color: white; /* Text color */
   text-decoration: none; /* Remove underlines */
   font-size: 1.2rem; /* Font size for links */
@@ -38,8 +38,18 @@
   padding-bottom: 0.25rem; /* Add space below text for hover effect */
 }
 
+/* Base style: selalu putih */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;       /* diperbesar */
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
 /* Underline on Hover */
-.nav-links a::after {
+.nav-links link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -50,8 +60,15 @@
   transition: width 0.3s; /* Smooth underline effect */
 }
 
-.nav-links a:hover::after {
+.nav-links link:hover::after {
   width: 100%; /* Full width underline on hover */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 6px;
 }
 
 /* Make navbar responsive (adjusting for smaller screens) */
@@ -68,7 +85,7 @@
     gap: 1.5rem; /* Space between links */
   }
 
-  .nav-links a {
+  .nav-links link {
     font-size: 1.5rem; /* Increase font size for better readability on mobile */
   }
 }

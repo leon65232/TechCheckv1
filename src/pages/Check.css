@@ -1,0 +1,71 @@
+/* Reset global margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  width: 100%;
+  padding: 20px;  /* Optional: Add padding around the content */
+  background-color: #183D3D;
+}
+
+/* Center keyboard container */
+.keyboard-container {
+  display: flex;
+  justify-content: center;  /* Center the keyboard horizontally */
+  align-items: center;      /* Center the keyboard vertically */
+  width: 100%;              /* Ensure it takes full width */
+  max-width: 800px;         /* Optional: set a max-width */
+  margin: 0 auto;           /* Center the container horizontally */
+  text-align: center;       /* Align text (or any other elements inside) to the center */
+}
+
+/* If you have a keyboard component or image, ensure it's centered */
+.keyboard {
+  display: flex;             /* Display the keyboard in a flex layout */
+  flex-wrap: wrap;           /* Allow the keyboard keys to wrap */
+  justify-content: center;   /* Center the keys horizontally */
+  align-items: center;       /* Center the keys vertically */
+  gap: 10px;                 /* Optional: space between the keys */
+}
+
+/* Optional: Style for the keys in the keyboard */
+.keyboard button {
+  background-color: #AED5C7;
+  border: 1px solid #183D3D;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.keyboard button:hover {
+  background-color: #183D3D;
+  color: #AED5C7;
+}
+
+section {
+  width: 100%;  /* Full width for sections */
+  display: flex; /* Flex layout for section */
+  justify-content: center;  /* Center the section content horizontally */
+  align-items: center;      /* Center the section content vertically */
+  margin-bottom: 20px;      /* Add spacing between sections */
+}
+
+@media (max-width: 768px) {
+  .keyboard-container {
+    width: 90%;  /* Adjust for smaller screen sizes */
+  }
+
+  .keyboard button {
+    font-size: 0.8rem;  /* Adjust button size for smaller screens */
+    padding: 8px 15px;  /* Adjust button padding */
+  }
+}

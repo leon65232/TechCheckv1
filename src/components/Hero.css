@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box; /* Ensures padding doesn't overflow */
+  margin: 0;
 }
 
 .hero-content {

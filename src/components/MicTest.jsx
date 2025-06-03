@@ -39,7 +39,7 @@ const MicTest = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className='text-white'>
       <h1 style={styles.title}>🎙️ Check Mic Online</h1>
       <p>To test your microphone, press the button below. The test is done in the browser.</p>
 
