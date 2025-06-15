@@ -1,37 +1,18 @@
-/* src/Chatbot.css */
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f2f5;
-} */
+
  body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f0f2f5;
     height: 100%;
 }
-/* .chat-container {
-    width: 60rem;
-    background-color: #040D12;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 80vh;
-} */
  .chat-container {
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
     min-width: 100vw;
     background-color: #040D12;
-    border-radius: 0;            /* Remove corner rounding if you want full-bleed */
-    box-shadow: none;            /* Optional: Remove shadow for full-screen look */
+    border-radius: 0;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -76,7 +57,6 @@
     margin-bottom: 10px;
     padding: 10px 15px;
     border-radius: 15px;
-    /* You might want to adjust max-width here too if messages become too wide */
     max-width: 70%;
     word-wrap: break-word;
 }
@@ -104,13 +84,11 @@
 .chat-input-container {
     display: flex;
     padding: 15px;
-    /* border-top: 1px solid #eee; */
 }
 .chat-input-container input {
     flex-grow: 1;
     padding: 10px;
     background-color: #5C8374;
-    /* border: 1px solid #ddd; */
     border-radius: 20px;
     margin-right: 10px;
     font-size: 1em;
@@ -130,7 +108,7 @@
     background-color: #5C8374;
 }
 .chat-input-container button:disabled {
-    background-color: #a5d6a7; /* Lighter green when disabled */
+    background-color: #a5d6a7;
     cursor: not-allowed;
 }
 #user-input {

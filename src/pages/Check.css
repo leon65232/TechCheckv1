@@ -7,11 +7,11 @@
 
 .main {
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
   justify-content: center; /* Center the content vertically */
   align-items: center; /* Center the content horizontally */
   width: 100%;
-  padding: 20px;  /* Optional: Add padding around the content */
+  padding: 20px; 
   background-color: #183D3D;
 }
 
@@ -21,21 +21,19 @@
   justify-content: center;  /* Center the keyboard horizontally */
   align-items: center;      /* Center the keyboard vertically */
   width: 100%;              /* Ensure it takes full width */
-  max-width: 800px;         /* Optional: set a max-width */
+  max-width: 800px;
   margin: 0 auto;           /* Center the container horizontally */
   text-align: center;       /* Align text (or any other elements inside) to the center */
 }
 
-/* If you have a keyboard component or image, ensure it's centered */
 .keyboard {
   display: flex;             /* Display the keyboard in a flex layout */
   flex-wrap: wrap;           /* Allow the keyboard keys to wrap */
   justify-content: center;   /* Center the keys horizontally */
   align-items: center;       /* Center the keys vertically */
-  gap: 10px;                 /* Optional: space between the keys */
+  gap: 10px;
 }
 
-/* Optional: Style for the keys in the keyboard */
 .keyboard button {
   background-color: #AED5C7;
   border: 1px solid #183D3D;

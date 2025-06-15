@@ -17,7 +17,6 @@ const AppContent = () => {
       {!hideLayout && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} /> 
-        {/* <Route path="/keyboard" element={<Keyboard />} />  KeyboardLoader page */}
         <Route path="/map" element={<Map />} />  
         <Route path="/check" element={<Check />} />  
         <Route path="/chatbot" element={<Chatbot />} /> 

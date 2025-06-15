@@ -6,11 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import './Chatbot.css';
 
-// !!! IMPORTANT: Replace with your actual Gemini API key.
-// THIS IS HIGHLY INSECURE FOR PRODUCTION. ONLY FOR PERSONAL, ISOLATED USE.
+// Dead API Key for Gemini
 const GEMINI_API_KEY = "AIzaSyD39DB1-3o8Soj-KWLgZdFi8w1xeoMLBuU";
 
-// Initialize the Gemini API client
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' }); 
 
@@ -86,7 +84,6 @@ function Chatbot() {
     <div className="chat-messages">
       {messages.map((msg, index) => (
         <div key={index} className={`message ${msg.sender}`}>
-          {/* Conditional rendering for markdown for bot messages */}
           {msg.sender === 'bot' ? (
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {msg.text}

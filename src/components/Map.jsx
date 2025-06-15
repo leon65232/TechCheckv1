@@ -170,8 +170,6 @@ const GoogleMapsComponent = ({ googleMapsApiKey }) => {
             textAlign: 'center'
         }}>
             <p>Allow us to access your location to find the closest store?</p>
-            {/* The actual browser prompt handles the "Agree/Disagree". */}
-            {/* This UI is just to inform the user why the prompt is appearing. */}
             <p style={{fontSize: '0.8em', color: '#666'}}>
                 (Your browser will ask for permission)
             </p>

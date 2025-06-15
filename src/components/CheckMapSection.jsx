@@ -9,7 +9,7 @@ const CheckMapSection = () => (
       <div className="card">
         <h1>Check</h1>
         <p>Perangkat elektronik Anda bermasalah?<br />Sebelum membuangnya, pastikan dulu kondisinya!</p>
-        <Link to="/check">Check</Link>  {/* Link to KeyboardLoader page */}
+        <Link to="/check">Check</Link>
       
       </div>
       <div className="card">

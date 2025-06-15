@@ -1,7 +1,7 @@
 /* src/components/ChatbotSection.css */
 .chatbot-section {
   position: relative;
-  background: url('/images.jpg') no-repeat center center/cover; /* Ensure the background image covers the area */
+  background: url('/images.jpg') no-repeat center center/cover;
   height: 20rem; /* Full screen height */
   width: 100%; /* Full width */
   display: flex;
